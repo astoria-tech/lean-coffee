@@ -1,24 +1,30 @@
-# README
+# Astoria-arch Lean Coffee App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### The goal is to build a lean-coffee app that we can use as a group to suggest and vote on popular topics for discussion prior to the meetup. This will allow us to brainstorm more interesting topics and organize who will be in each discussion and at what time they will happen.
 
-Things you may want to cover:
+```ruby
+  git clone git@github.com:astoria-arc/lean-coffee.git
+  cd lean-coffee
+  git checkout -b my_feature
 
-* Ruby version
+  server:
+  bundle install
+  rake db:create
+  rake db:migrate
+  rails s -p 3001
 
-* System dependencies
+  client
+  cd client
+  yarn install
+  yarn start
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  visit http://localhost:3000
+  ```
+  ### Tech Stack:
+   - Rails-API
+   - React
+   - Heroku
+   - Redux
+   - GraphQL
+   - Typescript
+   - Material-UI

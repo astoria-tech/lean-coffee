@@ -19,7 +19,7 @@ module Api::V1
       @card = Card.new(card_params)
 
       if @card.save
-        render json: @card, status: :created, location: @card
+        render json: @card, status: :created
       else
         render json: @card.errors, status: :unprocessable_entity
       end

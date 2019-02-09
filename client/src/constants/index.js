@@ -1,0 +1,2 @@
+export const RECEIVE_CARDS = 'RECEIVE_CARDS';
+
