@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CardsContainer extends Component {
+class CardsIndex extends Component {
   render() {
     return (
       <h1> Hello World! </h1>
@@ -8,4 +8,4 @@ class CardsContainer extends Component {
   }
 }
 
-export default CardsContainer;
+export default CardsIndex;
