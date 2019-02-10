@@ -23,7 +23,6 @@
   ### Tech Stack:
    - Rails-API
    - React
-   - Heroku
    - Redux
    - GraphQL
    - Typescript
