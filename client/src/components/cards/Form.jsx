@@ -1,34 +1,45 @@
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import TextField from '@material-ui/core/TextField';
+
+const renderTextField = ({
+  input,
+  label,
+  meta: { touched, error },
+  ...custom
+}) => (
+  <TextField
+    hintText={label}
+    floatingLabelText={label}
+    errorText={touched && error}
+    {...input}
+    {...custom}
+  />
+)
 
 const Form = props => {
   const { handleSubmit, pristine, reset, submitting } = props
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlFor="title">Topic</label>
+        <label htmlFor="title">Your Topic: </label>
         <div>
           <Field
             name="card"
-            component="input"
-            type="text"
-            placeholder="I think..."
-            className="form-control"
+            component={renderTextField}
           />
         </div>
       </div>
       <div>
         <button
           style={{marginRight:'10px'}}
-          className="btn btn-lg btn-primary"
           type="submit"
           disabled={pristine || submitting}>
           Submit
         </button>
 
         <button
-          type="button"
-          className="btn btn-lg btn-secondary"
+          type="submit"
           disabled={pristine || submitting}
           onClick={reset}>
           Clear Values

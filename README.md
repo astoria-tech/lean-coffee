@@ -13,7 +13,7 @@
   rake db:migrate
   rails s -p 3001
 
-  client
+  client:
   cd client
   yarn install
   yarn start
