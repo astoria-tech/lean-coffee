@@ -4,7 +4,7 @@ module Api::V1
 
     # GET /cards
     def index
-      @cards = Card.all
+      @cards = Card.all.order(created_at: :desc).map {|c| c.attributes.merge(votes: c.votes.count)}
 
       render json: @cards
     end
