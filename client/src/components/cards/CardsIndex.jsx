@@ -68,6 +68,7 @@ class CardsIndex extends Component {
   constructor(props) {
     super(props)
     this.vote = this.vote.bind(this)
+    this.delete = this.delete.bind(this)
   }
 
   componentDidMount() {
@@ -83,8 +84,13 @@ class CardsIndex extends Component {
     this.props.actions.votesActions.createVote(cardId);
   }
 
+  delete(cardId) {
+    this.props.actions.cardsActions.deleteCard(cardId)
+  }
+
   render() {
     const { classes } = this.props;
+    console.log(this.props.cards)
 
     return (
       <React.Fragment>
@@ -131,6 +137,10 @@ class CardsIndex extends Component {
                       <Button size="large" color="primary" onClick={(e) => this.vote(card.id)}>
                         Vote
                       </Button>
+
+                      <Button size="large" color="secondary" onClick={(e) => this.delete(card.id)}>
+                        Delete
+                      </Button>
                     </CardActions>
                   </Card>
                 </Grid>
@@ -165,6 +175,7 @@ function mapDispatchToProps(dispatch) {
     actions: {
       cardsActions: bindActionCreators(cardsActions, dispatch),
       votesActions: bindActionCreators(votesActions, dispatch),
+
     }
   }
 }
