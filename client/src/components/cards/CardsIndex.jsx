@@ -90,8 +90,6 @@ class CardsIndex extends Component {
 
   render() {
     const { classes } = this.props;
-    console.log(this.props.cards)
-
     return (
       <React.Fragment>
         <CssBaseline />
