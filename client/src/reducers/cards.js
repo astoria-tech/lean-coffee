@@ -31,7 +31,7 @@ export default createReducer(initialState, {
 //             // console.log(state.cards)
 //             return {
 //                 ...state,
-//                 items: state.cards.filter(card => card.id !== action.payload)
+//                 cards: state.cards.filter(card => card.id !== action.payload)
 //             }
 //         default: 
 //             return state

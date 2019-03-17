@@ -46,9 +46,6 @@ export function createCard(title) {
 }
 
 export function deleteCard(cardId){
-  // fetch(`/api/v1/cards/${cardId}`, {
-  //   method: 'DELETE'
-  // })
 
   return (dispatch, getState) => {
     return fetch(`/api/v1/cards/${cardId}`, {
