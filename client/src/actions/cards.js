@@ -1,6 +1,7 @@
 import history from '../history'
 import {
     RECEIVE_CARDS,
+    DELETE_CARD
 } from '../constants/index';
 import { push } from 'react-router-redux';
 
@@ -40,6 +41,19 @@ export function createCard(title) {
     .then(json => {
       dispatch(getCards())
       history.push('/cards')
+    })
+  }
+}
+
+export function deleteCard(cardId){
+
+  return (dispatch, getState) => {
+    return fetch(`/api/v1/cards/${cardId}`, {
+      method: 'DELETE'
+    })
+
+    .then(response => {
+      dispatch({type: DELETE_CARD, payload: cardId})
     })
   }
 }
