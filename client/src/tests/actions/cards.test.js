@@ -10,6 +10,7 @@ it('performs a get request using fetch and returns a dispatch with an array of o
         })
     })
 
-    const actions = await getCards()
-    console.log(actions)
+    const test = getCards()
+
+    
 })
