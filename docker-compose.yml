@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  api:
+    build: 'api'
+    environment:
+      POSTGRES_USER: 'lean-coffee'
+      POSTGRES_PASSWORD: 'lean-coffee'
+    depends_on:
+      - postgres
+    volumes:
+      - ./api:/srv
+    ports:
+      - '3001:3001'
+
+  client:
+    labels:
+      shipyard.route: '/'
+    build: 'client'
+    volumes:
+      - ./client/src:/srv/src
+    ports:
+      - '3000:3000'
+
+  postgres:
+    image: 'postgres:9.6-alpine'
+    environment:
+      POSTGRES_DB: 'lean-coffee_production'
+      POSTGRES_USER: 'lean-coffee'
+      POSTGRES_PASSWORD: 'lean-coffee'
+      PGDATA: '/var/lib/postgresql/data/pgdata'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+    ports:
+      - '5432'
+
+volumes:
+  postgres:
