@@ -8,11 +8,12 @@ RUN apk add --update \
     postgresql-dev \
     tzdata
 
+# Install project dependencies
+ADD Gemfile .
+RUN bundle install
+
 # Add the project files
 WORKDIR /srv
 ADD . ./
-
-# Install project dependencies
-RUN bundle install
 
 CMD rails s -b 0.0.0.0 -p 3001
