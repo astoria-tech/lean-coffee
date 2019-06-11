@@ -96,7 +96,7 @@ class CardsIndex extends Component {
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
             <Typography variant="h6" color="inherit" noWrap>
-              Astoria Arc - Lean Coffee
+              Astoria Tech Meetup
             </Typography>
           </Toolbar>
         </AppBar>
@@ -108,7 +108,7 @@ class CardsIndex extends Component {
                 What do you want to talk about?
               </Typography>
               <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                Add and vote on the topics you would like to talk about at the <b>Meetup Wednesday, May 29th.</b>
+                Add &amp; vote on the topics you want to talk about at the next meetup on <b>Wednesday, June 26th</b>.
               </Typography>
               <div className={classes.heroButtons}>
                 <Grid container spacing={16} justify="center">
@@ -148,9 +148,6 @@ class CardsIndex extends Component {
         </main>
         {/* Footer */}
         <footer className={classes.footer}>
-          <Typography variant="h6" align="center" gutterBottom>
-            Astoria Arc - Lean Coffee
-          </Typography>
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
             An Archipelago group.
           </Typography>
