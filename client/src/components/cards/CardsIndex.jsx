@@ -37,6 +37,9 @@ const styles = theme => ({
   heroButtons: {
     marginTop: theme.spacing.unit * 4,
   },
+  deleteButton: {
+    display: 'none',
+  },
   cardGrid: {
     padding: `${theme.spacing.unit * 8}px 0`,
   },
@@ -136,7 +139,7 @@ class CardsIndex extends Component {
                         Vote
                       </Button>
 
-                      <Button size="large" color="secondary" onClick={(e) => this.delete(card.id)}>
+                      <Button className={classes.deleteButton} size="large" color="secondary" onClick={(e) => this.delete(card.id)}>
                         Delete
                       </Button>
                     </CardActions>

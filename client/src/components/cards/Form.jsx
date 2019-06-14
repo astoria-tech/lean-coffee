@@ -42,7 +42,7 @@ const Form = props => {
           type="submit"
           disabled={pristine || submitting}
           onClick={reset}>
-          Clear Values
+          Clear
         </button>
       </div>
     </form>
