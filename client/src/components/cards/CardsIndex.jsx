@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withStyles } from '@material-ui/core/styles';
+
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import classNames from 'classnames';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
+import Icon from '@material-ui/core/Icon';
+import Link from '@material-ui/core/Link';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+
 import Form from './Form';
 import * as cardsActions from '../../actions/cards';
 import * as votesActions from '../../actions/votes';
@@ -98,9 +100,9 @@ class CardsIndex extends Component {
         <CssBaseline />
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
-            <Typography variant="h6" color="inherit" noWrap>
-              Astoria Tech Meetup
-            </Typography>
+            <Link variant="h5" color="inherit" href="https://astoria.app" noWrap>
+              astoria.app
+            </Link>
           </Toolbar>
         </AppBar>
         <main>
