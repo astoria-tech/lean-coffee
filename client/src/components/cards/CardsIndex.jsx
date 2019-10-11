@@ -113,7 +113,7 @@ class CardsIndex extends Component {
                 What do you want to talk about?
               </Typography>
               <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                Add &amp; vote on the topics you want to talk about at the next meetup on <b>Wednesday, September 25th</b>.
+                Add &amp; vote on the topics you want to talk about at the next meetup on <b>Wednesday, October 30th</b>.
               </Typography>
               <div className={classes.heroButtons}>
                 <Grid container spacing={16} justify="center">
