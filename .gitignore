@@ -25,3 +25,5 @@
 *.DS_Store
 
 /.env.local
+api/tmp
+api/log
